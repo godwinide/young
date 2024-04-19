@@ -229,7 +229,7 @@
                       <li>
                         <div class="user-box">
                           <div class="u-text">
-                            <h4>jamesdoe1</h4>
+                            <h4><%= req.user.fullname %></h4>
                             <p class="text-muted">
                               <a
                                 href="/cdn-cgi/l/email-protection"
@@ -388,6 +388,19 @@
         <%-body%>
       </div>
     </div>
+
+    <!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+  var _smartsupp = _smartsupp || {};
+  _smartsupp.key = 'b817e425b084444f63d49acf8ee1ffaa10040077';
+  window.smartsupp||(function(d) {
+    var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+    s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+    c.type='text/javascript';c.charset='utf-8';c.async=true;
+    c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+  })(document);
+  </script>
+  <noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
 
     <!--   Core JS Files   -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
