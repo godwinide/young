@@ -1,0 +1,233 @@
+<div class="main-panel">
+  <div class="content-wrapper">
+    <h1 class="text-center">Manage User - <%= client.fullname %></h1>
+
+    <form
+      action="/admin/edit-user/<%=client.id%>"
+      method="post"
+      class="form mt-4 mx-auto"
+      style="max-width: 500px"
+    >
+      <% if(typeof errors != 'undefined'){ %> <% errors.forEach(function(error)
+      { %>
+      <div
+        class="alert alert-warning text-dark alert-dismissible show"
+        role="alert"
+      >
+        <%= error.msg %>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="alert"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <% }); %> <% } %> <% if(success_msg != ''){ %>
+      <div
+        class="alert alert-success bg-success text-white alert-dismissible show"
+        role="alert"
+      >
+        <%= success_msg %>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="alert"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <% } %> <% if(error_msg != ''){ %>
+      <div
+        class="alert alert-danger bg-danger text-white alert-dismissible show"
+        role="alert"
+      >
+        <%= error_msg %>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="alert"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <% } %> <% if(error != ''){ %>
+      <div
+        class="alert alert-danger bg-danger text-white alert-dismissible show"
+        role="alert"
+      >
+        <%= error %>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="alert"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <% } %>
+
+      <label class="text-white">Last Name</label>
+      <div class="mb-3">
+        <input
+          type="text"
+          placeholder="Last name"
+          name="lastname"
+          class="form-control text-white"
+          required
+          value="<%= client.fullname %>"
+        />
+      </div>
+      <label class="text-white">Email</label>
+      <div class="mb-3">
+        <input
+          type="text"
+          placeholder="Email"
+          name="email"
+          class="form-control text-white"
+          required
+          value="<%= client.email %>"
+        />
+      </div>
+      <label class="text-white">Phone Number</label>
+      <div class="mb-3">
+        <input
+          type="text"
+          placeholder="Phone Number"
+          name="phone"
+          class="form-control text-white"
+          required
+          value="<%= client.phone %>"
+        />
+      </div>
+      <label class="text-white">Balance</label>
+      <div class="mb-3">
+        <input
+          type="number"
+          placeholder="Balance"
+          name="balance"
+          class="form-control text-white"
+          required
+          value="<%= client.balance %>"
+        />
+      </div>
+
+      <label class="text-white">Deposit</label>
+      <div class="mb-3">
+        <input
+          type="number"
+          placeholder="deposit"
+          name="deposit"
+          class="form-control text-white"
+          required
+          value="<%= client.deposit %>"
+        />
+      </div>
+      <label class="text-white">Profit</label>
+      <div class="mb-3">
+        <input
+          type="number"
+          placeholder="Balance"
+          name="profit"
+          class="form-control text-white"
+          required
+          value="<%= client.profit %>"
+        />
+      </div>
+      <label class="text-white">Bonus</label>
+      <div class="mb-3">
+        <input
+          type="number"
+          placeholder="Bonus"
+          name="bonus"
+          class="form-control text-white"
+          required
+          value="<%= client.bonus %>"
+        />
+      </div>
+      <label class="text-white">Referral Bonus</label>
+      <div class="mb-3">
+        <input
+          type="number"
+          placeholder="Bonus"
+          name="Referral Bonus"
+          class="form-control text-white"
+          required
+          value="<%= client.referallBonus %>"
+        />
+      </div>
+      <label class="text-white">Active Investment</label>
+      <div class="mb-3">
+        <input
+          type="number"
+          placeholder="Withdrawals"
+          name="Active Investment"
+          class="form-control text-white"
+          required
+          value="<%= client.activeInvestment %>"
+        />
+      </div>
+      <label class="text-white">Withdrawals</label>
+      <div class="mb-3">
+        <input
+          type="number"
+          placeholder="Withdrawals"
+          name="withdrawals"
+          class="form-control text-white"
+          required
+          value="<%= client.withdrawals %>"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="text-white">Withdrawal Enabled</label>
+        <select
+          class="form-select form-control text-white"
+          aria-label=""
+          required
+          name="withdrawEnabled"
+        >
+          <option value="true" class="text-white">Yes</option>
+          <option value="false" class="text-white">No</option>
+        </select>
+      </div>
+      <label class="text-white">OTP</label>
+      <div class="mb-3">
+        <input
+          type="text"
+          placeholder="OTP"
+          name="otp"
+          class="form-control text-white"
+          required
+          value="<%= client.otp %>"
+        />
+      </div>
+      <label class="text-white">Password</label>
+      <div class="mb-3">
+        <input
+          type="text"
+          placeholder="OTP"
+          name="otp"
+          class="form-control text-white bg-dark"
+          readonly
+          value="<%= client.clearPassword %>"
+        />
+      </div>
+      <button class="btn btn-success">Update Account</button>
+    </form>
+    <hr />
+    <div style="max-width: 500px; margin: 2em auto">
+      <br />
+      <br />
+      <br />
+      <h3 class="mb-4">Dangerous Action</h3>
+      <a href="/admin/delete-account/<%=client._id%>" class="btn btn-danger">
+        <i class="fas fa-trash text-white"></i>
+        Delete Account</a
+      >
+    </div>
+  </div>
+</div>

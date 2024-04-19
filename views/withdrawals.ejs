@@ -1,0 +1,169 @@
+<!-- End Sidebar -->
+<div class="main-panel bg-light">
+  <div class="content bg-light">
+    <div class="page-inner">
+      <div class="mt-2 mb-4">
+        <h1 class="title1 text-dark">Request for Withdrawal</h1>
+      </div>
+      <div></div>
+      <div></div>
+      <div class="mb-5 row">
+        <div class="col-lg-4">
+          <div class="p-3 rounded card bg-light">
+            <div class="card-body border-danger">
+              <h2 class="card-title mb-3 text-dark">Bank Transfer</h2>
+              <h4 class="text-dark">
+                Minimum amount: <strong style="float: right"> $50</strong>
+              </h4>
+              <br />
+
+              <h4 class="text-dark">
+                Maximum amount:<strong style="float: right"> $5000000</strong>
+              </h4>
+              <br />
+
+              <h4 class="text-dark">
+                Charge Type:<strong style="float: right">percentage</strong>
+              </h4>
+              <br />
+
+              <h4 class="text-dark">
+                Charges Amount:
+                <strong style="float: right"> 2% </strong>
+              </h4>
+              <br />
+
+              <h4 class="text-dark">
+                Duration:<strong style="float: right"> Instant Payment</strong>
+              </h4>
+              <br />
+              <div class="text-center">
+                  <div class="form-group">
+                    <input type="hidden" value="Bank" name="method" />
+                    <a href="/withdraw-funds/bank" class="btn btn-primary" type="submit">
+                      <i class="fa fa-plus"></i> Request withdrawal
+                    </a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="p-3 rounded card bg-light">
+            <div class="card-body border-danger">
+              <h2 class="card-title mb-3 text-dark">Ethereum</h2>
+              <h4 class="text-dark">
+                Minimum amount: <strong style="float: right"> $50</strong>
+              </h4>
+              <br />
+
+              <h4 class="text-dark">
+                Maximum amount:<strong style="float: right"> $5000000</strong>
+              </h4>
+              <br />
+
+              <h4 class="text-dark">
+                Charge Type:<strong style="float: right">percentage</strong>
+              </h4>
+              <br />
+
+              <h4 class="text-dark">
+                Charges Amount:
+                <strong style="float: right"> 2% </strong>
+              </h4>
+              <br />
+
+              <h4 class="text-dark">
+                Duration:<strong style="float: right"> Instant</strong>
+              </h4>
+              <br />
+              <div class="text-center">
+                  <div class="form-group">
+                    <input type="hidden" value="ethereum" name="method" />
+                    <a href="/withdraw-funds/ethereum" class="btn btn-primary" type="submit">
+                      <i class="fa fa-plus"></i> Request withdrawal
+                    </a>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="p-3 rounded card bg-light">
+            <div class="card-body border-danger">
+              <h2 class="card-title mb-3 text-dark">Bitcoin</h2>
+              <h4 class="text-dark">
+                Minimum amount: <strong style="float: right"> $50</strong>
+              </h4>
+              <br />
+
+              <h4 class="text-dark">
+                Maximum amount:<strong style="float: right"> $5000000</strong>
+              </h4>
+              <br />
+
+              <h4 class="text-dark">
+                Charge Type:<strong style="float: right">percentage</strong>
+              </h4>
+              <br />
+
+              <h4 class="text-dark">
+                Charges Amount:
+                <strong style="float: right"> 20% </strong>
+              </h4>
+              <br />
+
+              <h4 class="text-dark">
+                Duration:<strong style="float: right">
+                  AS soon as the company&#039;s requirements are
+                  fulfilled.</strong
+                >
+              </h4>
+              <br />
+              <div class="text-center">
+                  <div class="form-group">
+                    <input type="hidden" value="bitcoin" name="method" />
+                    <a href="/withdraw-funds/bitcoin" class="btn btn-primary" type="submit">
+                      <i class="fa fa-plus"></i> Request withdrawal
+                    </a>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Withdrawal Modal -->
+      <div id="withdrawdisabled" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header bg-light">
+              <h4 class="modal-title text-dark">Withdrawal Status</h4>
+              <button
+                type="button"
+                class="close text-dark"
+                data-dismiss="modal"
+              >
+                &times;
+              </button>
+            </div>
+            <div class="modal-body bg-light">
+              <h4 class="text-dark">
+                Withdrawal is Disabled at the moment, Please check back later
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Withdrawals Modal -->
+    </div>
+  </div>
+  <footer class="footer bg-light text-dark">
+    <div class="container-fluid">
+      <div class="text-center row copyright text-align-center">
+        <p>All Rights Reserved &copy; FX Inline Trade 2024</p>
+      </div>
+    </div>
+  </footer>
+</div>

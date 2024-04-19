@@ -1,0 +1,73 @@
+<div class="main-panel bg-light">
+  <div class="content bg-light">
+    <div class="page-inner">
+      <div class="mt-2 mb-4">
+        <h1 class="title1 d-inline text-dark">Request for Withdrawal</h1>
+        <%-include("./partials/messages.ejs") %>
+        <div class="d-inline">
+          <div class="float-right btn-group">
+            <form action="/withdraw-funds/bitcoin" method="post">
+              <button class="btn btn-primary btn-sm">
+                <i class="fa fa-envelope"></i> Request OTP
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div></div>
+      <div></div>
+      <div class="mb-5 row">
+        <div class="col-lg-8 offset-md-2">
+          <div class="p-md-4 p-2 rounded card bg-light">
+            <div class="card-body">
+              <div class="mb-3 alert alert-success">
+                <h4 class="text-dark">
+                  Your Payment Method is <strong>Bitcoin</strong>
+                </h4>
+              </div>
+              <form action="/withdraw-funds-method" method="post">
+                <div class="form-group">
+                  <h5 class="text-dark">Enter Amount to withdraw</h5>
+                  <input
+                    class="form-control text-dark bg-light"
+                    placeholder="Enter Amount"
+                    type="number"
+                    name="amount"
+                    required
+                  />
+                </div>
+                <input value="bitcoin" type="hidden" name="method" />
+
+                <div class="form-group">
+                  <h5 class="text-dark">Enter OTP</h5>
+                  <input
+                    class="form-control text-dark bg-light"
+                    placeholder="Enter Code"
+                    type="text"
+                    name="otpcode"
+                    required
+                  />
+                  <small class="text-dark"
+                    >OTP will be sent to your email when you request</small
+                  >
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-primary" type="submit">
+                    Complete Request
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer bg-light text-dark">
+    <div class="container-fluid">
+      <div class="text-center row copyright text-align-center">
+        <p>All Rights Reserved &copy; FX Inline Trade 2024</p>
+      </div>
+    </div>
+  </footer>
+</div>

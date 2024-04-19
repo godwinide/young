@@ -1,0 +1,64 @@
+<!-- End Sidebar -->
+<div class="main-panel bg-light">
+  <div class="content bg-light">
+    <div class="page-inner">
+      <div class="mt-2 mb-4">
+        <h1 class="title1 text-dark">Fund Your Account</h1>
+      </div>
+      <div></div>
+      <div></div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card bg-light">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-8">
+                  <form method="post" action="/deposits">
+                    <%-include("./partials/messages.ejs") %>
+                    <div class="row">
+                      <div class="mb-4 col-md-12">
+                        <h5 class="card-title text-dark">Enter Amount</h5>
+                        <br />
+                        <input
+                          class="form-control text-dark bg-light"
+                          placeholder="Enter Amount"
+                          type="number"
+                          name="amount"
+                          required
+                        />
+                      </div>
+                      <div class="mb-4 col-md-12">
+                        <h5 class="card-title text-dark">Payment Method</h5>
+                        <br />
+                        <select name="method" id="" class="form-control">
+                          <option value="ethereum">Ethereum</option>
+                          <option value="bitcoin">Bitcoin</option>
+                          <option value="usdt">USDT</option>
+                        </select>
+                      </div>
+
+                      <div class="mt-2 mb-1 col-md-12">
+                        <input
+                          type="submit"
+                          class="px-5 btn btn-primary btn-lg"
+                          value="Procced to Payment"
+                        />
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer bg-light text-dark">
+    <div class="container-fluid">
+      <div class="text-center row copyright text-align-center">
+        <p>All Rights Reserved &copy; FX Inline Trade 2024</p>
+      </div>
+    </div>
+  </footer>
+</div>
