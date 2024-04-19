@@ -33,6 +33,9 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+
+
+
 // Global variables
 app.use(function (req, res, next) {
   res.locals.siteName = "Ava Digital Trade"
