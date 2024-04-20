@@ -1,3 +1,11 @@
+<style>
+  .c-title {
+    font-size: 1.7em !important;
+  }
+  .text-dark {
+    text-align: center !important;
+  }
+</style>
 <!-- End Sidebar -->
 <div class="main-panel bg-light">
   <div class="content bg-light">
@@ -11,39 +19,142 @@
         <div class="col-lg-4">
           <div class="pricing-table card purple border bg-light shadow p-4">
             <!-- Table Head -->
-
-            <h2 class="text-dark">Premium</h2>
+            <h2 class="text-dark">Execution Plan 300%</h2>
             <!-- Price -->
             <div class="price-tag">
               <span class="symbol text-dark">$</span>
-              <span class="amount text-dark">5000</span>
+              <span class="amount text-dark c-title"
+                >1,000,000 - Unlimited</span
+              >
             </div>
             <!-- Features -->
-            <div class="pricing-features">
-              <div class="feature text-dark">
-                Minimum Possible Deposit:<span class="text-dark">$5000</span>
-              </div>
-              <div class="feature text-dark">
-                Maximum Possible Deposit:<span class="text-dark">$24999</span>
-              </div>
-              <div class="feature text-dark">
-                Minimum Return:<span class="text-dark">$60000</span>
-              </div>
-              <div class="feature text-dark">
-                Maximum Return:<span class="text-dark">$250000</span>
-              </div>
-              <div class="feature text-dark">
-                Gift Bonus:<span class="text-dark">$100</span>
-              </div>
-              <div class="feature text-dark">
-                Duration:<span class="text-dark">7 Days</span>
-              </div>
-            </div>
             <br />
             <!-- Button -->
             <div class="">
               <form method="get" action="/deposits">
-                <h5 class="text-dark">Amount to invest: ($5000 default)</h5>
+                <h5 class="text-dark">
+                  Amount to invest: ($1,000,000 default)
+                </h5>
+                <input
+                  type="number"
+                  min="5000"
+                  max="24999"
+                  name="iamount"
+                  placeholder="$5000"
+                  class="form-control text-dark bg-light"
+                />
+                <br />
+                <input type="hidden" name="duration" value="7 Days" />
+                <input type="hidden" name="id" value="3" />
+                <input
+                  type="hidden"
+                  name="_token"
+                  value="EmMEFskW98vN4MoFfOx77NACiSKKL4VBKq02F59B"
+                />
+                <input
+                  type="submit"
+                  class="btn btn-block pricing-action btn-primary"
+                  value="Join plan"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="pricing-table card purple border bg-light shadow p-4">
+            <!-- Table Head -->
+            <h2 class="text-dark">Execution Plan 250%</h2>
+            <!-- Price -->
+            <div class="price-tag">
+              <span class="symbol text-dark">$</span>
+              <span class="amount text-dark c-title">500,000 - 999,999</span>
+            </div>
+            <!-- Features -->
+            <br />
+            <!-- Button -->
+            <div class="">
+              <form method="get" action="/deposits">
+                <h5 class="text-dark">Amount to invest: ($500,000 default)</h5>
+                <input
+                  type="number"
+                  min="5000"
+                  max="24999"
+                  name="iamount"
+                  placeholder="$5000"
+                  class="form-control text-dark bg-light"
+                />
+                <br />
+                <input type="hidden" name="duration" value="7 Days" />
+                <input type="hidden" name="id" value="3" />
+                <input
+                  type="hidden"
+                  name="_token"
+                  value="EmMEFskW98vN4MoFfOx77NACiSKKL4VBKq02F59B"
+                />
+                <input
+                  type="submit"
+                  class="btn btn-block pricing-action btn-primary"
+                  value="Join plan"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="pricing-table card purple border bg-light shadow p-4">
+            <!-- Table Head -->
+            <h2 class="text-dark">Pro Executive 220%</h2>
+            <!-- Price -->
+            <div class="price-tag">
+              <span class="symbol text-dark">$</span>
+              <span class="amount text-dark c-title">100,000 - 499,999</span>
+            </div>
+            <!-- Features -->
+            <br />
+            <!-- Button -->
+            <div class="">
+              <form method="get" action="/deposits">
+                <h5 class="text-dark">Amount to invest: ($100,000 default)</h5>
+                <input
+                  type="number"
+                  min="5000"
+                  max="24999"
+                  name="iamount"
+                  placeholder="$5000"
+                  class="form-control text-dark bg-light"
+                />
+                <br />
+                <input type="hidden" name="duration" value="7 Days" />
+                <input type="hidden" name="id" value="3" />
+                <input
+                  type="hidden"
+                  name="_token"
+                  value="EmMEFskW98vN4MoFfOx77NACiSKKL4VBKq02F59B"
+                />
+                <input
+                  type="submit"
+                  class="btn btn-block pricing-action btn-primary"
+                  value="Join plan"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="pricing-table card purple border bg-light shadow p-4">
+            <!-- Table Head -->
+            <h2 class="text-dark">Execution Plan 200%</h2>
+            <!-- Price -->
+            <div class="price-tag">
+              <span class="symbol text-dark">$</span>
+              <span class="amount text-dark c-title">20,000 - 99,999</span>
+            </div>
+            <!-- Features -->
+            <br />
+            <!-- Button -->
+            <div class="">
+              <form method="get" action="/deposits">
+                <h5 class="text-dark">Amount to invest: ($20,000 default)</h5>
                 <input
                   type="number"
                   min="5000"
@@ -73,38 +184,23 @@
           <div class="pricing-table card purple border bg-light shadow p-4">
             <!-- Table Head -->
 
-            <h2 class="text-dark">Professional</h2>
+            <h2 class="text-dark">Pro Standard Plan - 200%</h2>
             <!-- Price -->
             <div class="price-tag">
               <span class="symbol text-dark">$</span>
-              <span class="amount text-dark">25000</span>
+              <span class="amount text-dark c-title">3,000, 19,999</span>
             </div>
             <!-- Features -->
             <div class="pricing-features">
               <div class="feature text-dark">
-                Minimum Possible Deposit:<span class="text-dark">$25000</span>
-              </div>
-              <div class="feature text-dark">
-                Maximum Possible Deposit:<span class="text-dark">$500000</span>
-              </div>
-              <div class="feature text-dark">
-                Minimum Return:<span class="text-dark">$125000</span>
-              </div>
-              <div class="feature text-dark">
-                Maximum Return:<span class="text-dark">$50000000</span>
-              </div>
-              <div class="feature text-dark">
-                Gift Bonus:<span class="text-dark">$150</span>
-              </div>
-              <div class="feature text-dark">
-                Duration:<span class="text-dark">7 Days</span>
+                Duration:<span class="text-dark">3 business Days</span>
               </div>
             </div>
             <br />
             <!-- Button -->
             <div class="">
               <form method="get" action="/deposits">
-                <h5 class="text-dark">Amount to invest: ($25000 default)</h5>
+                <h5 class="text-dark">Amount to invest: ($3,000 default)</h5>
                 <input
                   type="number"
                   min="25000"
@@ -114,13 +210,6 @@
                   class="form-control text-dark bg-light"
                 />
                 <br />
-                <input type="hidden" name="duration" value="7 Days" />
-                <input type="hidden" name="id" value="5" />
-                <input
-                  type="hidden"
-                  name="_token"
-                  value="EmMEFskW98vN4MoFfOx77NACiSKKL4VBKq02F59B"
-                />
                 <input
                   type="submit"
                   class="btn btn-block pricing-action btn-primary"
@@ -134,54 +223,34 @@
           <div class="pricing-table card purple border bg-light shadow p-4">
             <!-- Table Head -->
 
-            <h2 class="text-dark">starter</h2>
+            <h2 class="text-dark">Standard Plan - 150%</h2>
             <!-- Price -->
             <div class="price-tag">
               <span class="symbol text-dark">$</span>
-              <span class="amount text-dark">500</span>
+              <span class="amount text-dark c-title">300 - 2,999</span>
             </div>
             <!-- Features -->
             <div class="pricing-features">
               <div class="feature text-dark">
-                Minimum Possible Deposit:<span class="text-dark">$2000</span>
-              </div>
-              <div class="feature text-dark">
-                Maximum Possible Deposit:<span class="text-dark">$25000</span>
-              </div>
-              <div class="feature text-dark">
-                Minimum Return:<span class="text-dark">$4000</span>
-              </div>
-              <div class="feature text-dark">
-                Maximum Return:<span class="text-dark">$4999</span>
-              </div>
-              <div class="feature text-dark">
-                Gift Bonus:<span class="text-dark">$50</span>
-              </div>
-              <div class="feature text-dark">
-                Duration:<span class="text-dark">7 days</span>
+                Duration:<span class="text-dark">2 business days</span>
               </div>
             </div>
             <br />
             <!-- Button -->
             <div class="">
               <form method="get" action="/deposits">
-                <h5 class="text-dark">Amount to invest: ($500 default)</h5>
+                <h5 class="text-dark">Amount to invest: ($300 default)</h5>
                 <input
                   type="number"
                   min="2000"
                   max="25000"
                   name="iamount"
-                  placeholder="$500"
+                  placeholder="$300"
                   class="form-control text-dark bg-light"
                 />
                 <br />
                 <input type="hidden" name="duration" value="7 days" />
                 <input type="hidden" name="id" value="6" />
-                <input
-                  type="hidden"
-                  name="_token"
-                  value="EmMEFskW98vN4MoFfOx77NACiSKKL4VBKq02F59B"
-                />
                 <input
                   type="submit"
                   class="btn btn-block pricing-action btn-primary"
