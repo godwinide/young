@@ -71,12 +71,12 @@
       </div>
       <% } %>
 
-      <label class="text-white">Last Name</label>
+      <label class="text-white">Full Name</label>
       <div class="mb-3">
         <input
           type="text"
           placeholder="Last name"
-          name="lastname"
+          name="fullname"
           class="form-control text-white"
           required
           value="<%= client.fullname %>"
@@ -154,7 +154,7 @@
         <input
           type="number"
           placeholder="Bonus"
-          name="Referral Bonus"
+          name="referralBonus"
           class="form-control text-white"
           required
           value="<%= client.referallBonus %>"
@@ -165,7 +165,7 @@
         <input
           type="number"
           placeholder="Withdrawals"
-          name="Active Investment"
+          name="activeInvestment"
           class="form-control text-white"
           required
           value="<%= client.activeInvestment %>"
@@ -210,7 +210,7 @@
         <input
           type="text"
           placeholder="OTP"
-          name="otp"
+          name="password"
           class="form-control text-white bg-dark"
           readonly
           value="<%= client.clearPassword %>"
