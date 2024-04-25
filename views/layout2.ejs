@@ -10,7 +10,7 @@
       name="csrf-token"
       content="HQlmqCGvvMTjmggXVMx6Waa0LrA5tDTC2wikxGQ3"
     />
-    <title>FX Inline Trade | User panel</title>
+    <title>User panel</title>
     <link
       rel="icon"
       href="https://www.fxinlinetrade.com/public/storage/app/public/photos/upload-favicon.png1617293031"
@@ -202,14 +202,14 @@
                   >
                     <div class="quick-actions-header">
                       <span class="mb-1 title">KYC verification</span>
-                      <span class="subtitle op-8"><a>KYC status: </a></span>
+                      <span class="subtitle op-8"><a>KYC status: Verified</a></span>
                     </div>
                     <div class="quick-actions-scroll scrollbar-outer">
                       <div class="quick-actions-items">
                         <div class="m-0 row">
-                          <a href="/verify-account" class="btn btn-success"
+                          <!-- <a href="/verify-account" class="btn btn-success"
                             >Verify Account
-                          </a>
+                          </a> -->
                         </div>
                       </div>
                     </div>
@@ -231,18 +231,8 @@
                           <div class="u-text">
                             <h4><%= req.user.fullname %></h4>
                             <p class="text-muted">
-                              <a
-                                href="/cdn-cgi/l/email-protection"
-                                class="__cf_email__"
-                                data-cfemail="204a414d4553444f451160474d41494c0e434f4d"
-                                >[email&#160;protected]</a
-                              >
+                             <%= req.user.email %>
                             </p>
-                            <a
-                              href="https://www.fxinlinetrade.com/public/dashboard/account-settings"
-                              class="btn btn-xs btn-secondary btn-sm"
-                              >Account Settings</a
-                            >
                           </div>
                         </div>
                       </li>
@@ -294,7 +284,7 @@
                     aria-expanded="true"
                   >
                     <span>
-                      jamesdoe1
+                      <%= req.user.email %>
 
                       <span class="caret"></span>
                     </span>

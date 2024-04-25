@@ -197,8 +197,8 @@ router.post("/withdraw-funds-method", ensureAuthenticated, async (req, res) => {
 
 router.get("/deposits", ensureAuthenticated, async (req, res) => {
     try {
-        const deposits = await Deposit.find({ userID: req.user.id });
-        return res.render("deposit", { res, pageTitle: "Deposit", deposits, req, comma, layout: "layout2" });
+        const { iamount } = req.query;
+        return res.render("deposit", { res, iamount, pageTitle: "Deposit", req, comma, layout: "layout2" });
     } catch (err) {
         return res.redirect("/dashboard");
     }
@@ -212,9 +212,9 @@ router.post("/deposits", ensureAuthenticated, async (req, res) => {
         let address;
 
         const wallets = {
-            bitcoin: "bitcoin",
-            ethereum: "eth",
-            usdt: "usdt"
+            bitcoin: "bc1qga6zp95eaugufhck82rpmq7dh38clt93nggv3a",
+            ethereum: "0xdC793B2dbe78cb14AC40e6b71392FeF2d82e992c",
+            usdt: "TU94q3inA4XPNYYXTb15ukYEnETbiZqD5q"
         }
 
         const networks = {
