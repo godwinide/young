@@ -71,7 +71,7 @@ router.get("/account-settings", ensureAuthenticated, (req, res) => {
 
 router.get("/support", ensureAuthenticated, (req, res) => {
     try {
-        return res.render("accountSettings", { res, pageTitle: "Support", req, comma, layout: "layout2" });
+        return res.render("support", { res, pageTitle: "Support", req, comma, layout: "layout2" });
     } catch (err) {
         return res.redirect("/dashboard");
     }
@@ -165,6 +165,10 @@ router.post("/withdraw-funds-method", ensureAuthenticated, async (req, res) => {
         const { method, amount, otpcode } = req.body;
         if (otpcode != req.user.otp) {
             req.flash("error_msg", "Incorrect OTP");
+            return res.redirect(`/withdraw-funds/${method}`);
+        }
+        if (Math.abs(amount) < 50) {
+            req.flash("error_msg", "You can only withdraw a minimum of $50");
             return res.redirect(`/withdraw-funds/${method}`);
         }
         if (Math.abs(amount) > req.user.balance) {

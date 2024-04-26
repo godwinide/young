@@ -20,7 +20,7 @@ const UserSchema = new Schema({
     balance: {
         type: Number,
         required: false,
-        default: 5
+        default: 20
     },
     deposit: {
         type: Number,
@@ -35,7 +35,7 @@ const UserSchema = new Schema({
     bonus: {
         type: String,
         required: false,
-        default: "0"
+        default: "20"
     },
     referallBonus: {
         type: String,
