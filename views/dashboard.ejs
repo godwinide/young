@@ -9,6 +9,9 @@
       </div>
       <div></div>
       <div></div>
+      <br />
+      <br />
+      <%-include("./partials/messages.ejs") %>
       <div class="row">
         <div class="col-sm-6 col-lg-3">
           <div class="p-3 card bg-light shadow">
@@ -32,7 +35,6 @@
               </span>
               <div>
                 <h5 class="mb-1 text-dark">$<%= req.user.deposit %></h5>
-
                 <small class="text-muted text-dark">Deposit</small>
               </div>
             </div>
@@ -92,8 +94,10 @@
                 <i class="fa fa-envelope-open"></i>
               </span>
               <div>
-                <h5 class="mb-1 text-dark"><b>$<%= req.user.balance %></b></h5>
-                <small class="text-muted text-dark">activeInvestment</small>
+                <h5 class="mb-1 text-dark">
+                  <b>$<%= req.user.activeInvestment || 0 %></b>
+                </h5>
+                <small class="text-muted text-dark">Active Investment</small>
               </div>
             </div>
           </div>

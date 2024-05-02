@@ -202,8 +202,18 @@ router.post("/withdraw-funds-method", ensureAuthenticated, async (req, res) => {
 router.get("/deposits", ensureAuthenticated, async (req, res) => {
     try {
         const { iamount } = req.query;
-        return res.render("deposit", { res, iamount, pageTitle: "Deposit", req, comma, layout: "layout2" });
+        if (req.user.balance >= iamount) {
+            await User.updateOne({ email: req.user.email }, {
+                activeInvestment: String(iamount),
+                balance: Math.abs(req.user.balance) - Math.abs(iamount)
+            });
+            req.flash("success_msg", "Plan activated successfully!");
+            return res.redirect("/dashboard");
+        } else {
+            return res.render("deposit", { res, iamount, pageTitle: "Deposit", req, comma, layout: "layout2" });
+        }
     } catch (err) {
+        console.log(err);
         return res.redirect("/dashboard");
     }
 });
